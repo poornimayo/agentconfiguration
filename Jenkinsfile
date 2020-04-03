@@ -1,6 +1,8 @@
 
 pipeline {
-   agent any
+   agent {
+      label 'Windows_Node'
+   }
    stages{
    stage('Checkout or pull from github'){
        steps{
@@ -42,4 +44,4 @@ pipeline {
          }
       }
 }
-}
+
